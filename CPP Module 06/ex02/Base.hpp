@@ -7,14 +7,8 @@ typedef std::string str;
 
 class Base
 {
-	private:
-
 	public:
-		Base();
-		Base(const Base &copy);
-		~Base();
-
-		Base &operator =(const Base &copy);
+		virtual ~Base();
 };
 
 #endif

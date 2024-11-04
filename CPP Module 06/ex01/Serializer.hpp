@@ -2,19 +2,23 @@
 #define SERIALIZER_HPP
 
 #include <iostream>
+#include <inttypes.h>
+#include "Data.hpp"
 
 typedef std::string str;
 
 class Serializer
 {
 	private:
-
-	public:
 		Serializer();
 		Serializer(const Serializer &copy);
+		Serializer &operator =(const Serializer &copy);
+
+	public:
 		~Serializer();
 
-		Serializer &operator =(const Serializer &copy);
+		static uintptr_t	 serialize  (Data *ptr);
+		static Data			*deserialize(uintptr_t raw);
 };
 
 #endif

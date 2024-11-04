@@ -2,22 +2,31 @@
 
 Serializer::Serializer()
 {
-	std::cout << "An Serializer has been created!\n";
+	
 }
 
 Serializer::Serializer(const Serializer &copy)
 {
-	std::cout << "An Serializer has been created with the same qualities as another!\n";
+	(void) copy;
+}
+
+uintptr_t Serializer::serialize(Data *ptr)
+{
+	return (reinterpret_cast<uintptr_t>(ptr));
+}
+
+Data *Serializer::deserialize(uintptr_t raw)
+{
+	return (reinterpret_cast<Data *>(raw));
 }
 
 Serializer &Serializer::operator =(const Serializer &copy)
 {
-	//if (&copy != this)
-		//copy
+	(void) copy;
 	return *this;
 }
 
 Serializer::~Serializer()
 {
-	std::cout << "The Serializer has been destroyed!\n";
+	
 }

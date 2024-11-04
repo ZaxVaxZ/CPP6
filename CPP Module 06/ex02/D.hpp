@@ -1,15 +1,15 @@
-#ifndef C_HPP
-#define C_HPP
+#ifndef D_HPP
+#define D_HPP
 
 #include <iostream>
 #include "Base.hpp"
 
 typedef std::string str;
 
-class C: public Base
+class D: public Base
 {
 	public:
-		~C();
+		~D();
 };
 
 #endif

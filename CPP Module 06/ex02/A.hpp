@@ -2,19 +2,14 @@
 #define A_HPP
 
 #include <iostream>
+#include "Base.hpp"
 
 typedef std::string str;
 
-class A
+class A: public Base
 {
-	private:
-
 	public:
-		A();
-		A(const A &copy);
 		~A();
-
-		A &operator =(const A &copy);
 };
 
 #endif
