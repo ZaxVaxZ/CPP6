@@ -69,19 +69,21 @@ void identify(Base &p)
 int main()
 {
 	srand(time(NULL));
-	Base	*gen;
-	for(int i = 0; i < 10; i++)
 	{
-		gen = generate();
+		Base	*gen;
+		for(int i = 0; i < 10; i++)
+		{
+			gen = generate();
+			identify(gen);
+			identify(*gen);
+			delete gen;
+			std::cout << "============" << i + 1 << "============\n";
+		}
+		identify(NULL);
+		gen = new D();
 		identify(gen);
 		identify(*gen);
 		delete gen;
-		std::cout << "============" << i + 1 << "============\n";
 	}
-	identify(NULL);
-	gen = new D();
-	identify(gen);
-	identify(*gen);
-	delete gen;
 	return (0);
 }
